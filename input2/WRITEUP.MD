@@ -98,7 +98,7 @@ It is apparent that one is read from stdin and the another is read from stderr. 
 
 <() is process substitution. inside bracket needs to put commands that can output data. The data will be inputted to /dev/fd/.. 
 < is input redirection
-> is output redirection
+'>' is output redirection
 ```
 ./input2 $(printf "A %.0s" {1..64}) "" $'\x20\x0a\x0d' $(printf "B %.0s" {1..33}) \
         < <(printf '\x00\x0a\x00\xff') 2< <(printf '\x00\x0a\x02\xff')
@@ -131,6 +131,8 @@ To close socket:
 exec FILE_DESCRIPTOR<&-
 exec FILE_DESCRIPTOR>&-
 ```
+
+command -v is to check whether a command exists or not
 
 #### Final
 ```bash
