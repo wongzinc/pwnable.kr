@@ -1,0 +1,11 @@
+   0x0000000000001442 <+303>:	lea    rax,[rbp-0x23]
+   0x0000000000001446 <+307>:	mov    rsi,rax
+--Type <RET> for more, q to quit, c to continue without paging--
+   0x0000000000001449 <+310>:	lea    rax,[rip+0xc15]        # 0x2065
+   0x0000000000001450 <+317>:	mov    rdi,rax
+   0x0000000000001453 <+320>:	mov    eax,0x0
+   0x0000000000001458 <+325>:	call   0x11c0 <__isoc99_scanf@plt>
+
+
+(gdb) x/x $rbp-0x23
+0x7fffffffe47d:	0x34333231
